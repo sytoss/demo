@@ -8,6 +8,18 @@ describe('## Test API Tests', () => {
     app.server.close();
   });
 
+  test('### GET /hello/:slug', () => {
+    request(app)
+      .get('/hello/World')
+      .expect('Content-Type', /html/)
+      .expect(200)
+      .then(res => {
+        expect(res.text).toMatch(
+          /Hello World/
+        );
+      });
+  });
+
   test('### GET /', () => {
     return request(app)
       .get('/')
@@ -20,15 +32,4 @@ describe('## Test API Tests', () => {
       });
   });
 
-  test('### GET /hello/:slug', () => {
-    request(app)
-      .get('/hello/World')
-      .expect('Content-Type', /html/)
-      .expect(200)
-      .then(res => {
-        expect(res.text).toMatch(
-          /Hello World/
-        );
-      });
-  });
 });
