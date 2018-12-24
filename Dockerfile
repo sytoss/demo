@@ -5,7 +5,7 @@ RUN mkdir -p /opt/app/api
 WORKDIR /opt/app/api
 
 COPY package.json ./
-COPY ./dist ./dist
+COPY ./src/api ./src/api
 
 RUN npm install --production
 

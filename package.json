@@ -10,7 +10,7 @@
     "test": "jest --runInBand --coverage ",
     "build": "npm run lint && npm run test",
     "docker-create-image": "npm i && npm run build && docker build -t \"demo-rest-api\" .",
-    "docker-run": "docker run -p 8080:6080 demo-rest-api"
+    "docker-run": "docker run -p 8080:8080 demo-rest-api"
   },
   "dependencies": {
     "express": "^4.16.4",
