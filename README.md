@@ -22,7 +22,8 @@ Be sure that apidoc installed, if not simply run `npm install apidoc -g`
 Be sure that jest installed, if not simply run `npm install jest -g`
 
 To run unit tests simply run `npm run test`.
-    
+
+## Docker 
 ### Creating docker image
 
 To create docker image simply run `npm run docker-create-image`.
