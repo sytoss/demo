@@ -1,0 +1,9 @@
+.cache
+.idea
+.vscode
+dist
+doc
+*.iml
+node_modules
+coverage
+*lock*

@@ -1,0 +1,23 @@
+{
+  "name": "test-rest-api",
+  "description": "Micro-Service with 3 REST-API Endpoints",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "lint": "eslint --ext .js --ext .jsx --fix ./src",
+    "test": "jest --runInBand --coverage ",
+    "build": "npm run lint && npm run test",
+    "docker-create-image": "npm i && npm run build && docker build -t \"demo-rest-api\" .",
+    "docker-run": "docker run -p 8080:6080 demo-rest-api"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "webpack": "^4.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "supertest": "^3.3.0"
+  }
+}
